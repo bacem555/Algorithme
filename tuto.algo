@@ -1,0 +1,25 @@
+ALGORITHM CALCUL_SUM
+
+VAR
+    sum:INTEGER=0;
+    i:INTEGER=0:
+    T1 : ARRAY_OF INTEGER[5];
+      T2 : ARRAY_OF INTEGER[5];
+BEGIN
+    FOR i FROM 0 TO 4 STEP 1  DO
+        FOR j FROM 0 TO 4 STEP 1 DO
+            IF (T1[i]<>T2[j]) THEN
+            sum=sum+T1[i];
+                
+            END_IF
+        END_FOR
+    END_FOR
+    FOR j FROM 0 TO 4 STEP 1  DO
+        FOR i FROM 0 TO 4 STEP 1 DO
+            IF (T2[j]<>T1[i]) THEN
+            sum=sum+T2[j];
+                
+            END_IF
+        END_FOR
+    END_FOR
+END
