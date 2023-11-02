@@ -1,0 +1,25 @@
+ALGORITHM CHECKPOINT_AlGO
+VAR
+    text:STRING;
+    count_words:INTEGER=1;
+    count_voyel:INTEGER=0;
+    count_char:INTEGER=0;
+    i:INTEGER=0;
+BEGIN
+    write("enter your sentence");
+    read(text);
+    WHILE (text[i]<>".") DO
+        i:=i+1;
+        count_char++
+        IF (text[i]="a" OR text[i]="A" OR text[i]="e" OR text[i]="E" OR text[i]="i" OR text[i]="I" OR text[i]="e" OR text[i]="E" OR text[i]="y" OR text[i]="Y" OR text[i]="u" OR text[i]="U") THEN
+            count_voyel++
+        END_IF
+        IF (text[i]=" ") THEN
+            count_words++
+        END_IF
+        
+    END_WHILE
+    write("number of words egale",count_words);
+    write("number of voyel egale",count_voyel);
+    write("number of charachters",count_char);
+END
