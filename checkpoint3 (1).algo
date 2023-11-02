@@ -1,0 +1,21 @@
+PROCEDURE swap(VAR:x,y:INTEGER)
+VAR
+    z:INTEGER;
+BEGIN
+    z:=x;
+    x:=y;
+    y:=z;
+END
+ALGORITHM check3
+VAR
+   i,j:INTEGER;
+   a:array_name : ARRAY_OF INTEGER;
+BEGIN
+    FOR 1 FROM min TO a.length-1 STEP step  DO
+       j=i 
+       WHILE (j>0 AND a[j-1]>a[i]) DO
+        swap a[i],a[j-1]
+        j=j-1
+       END_WHILE
+    END_FOR
+END
